@@ -1,37 +1,23 @@
-//import Link from "next/link";
 import Header from "../comps/Header";
 import Layout from "../comps/MyLayout.js";
+//added 1/22
+import Link from "next/link";
 
-// const Index = () => (
-//   <div>
-// <Link href="/about">
-//   <button>About</button>
-// </Link>
-// <Link href="/bars">
-//   <button>Bars</button>
-// </Link>
-// <Link href="/home">
-//   <button>Home</button>
-// </Link>
-// <Link href="/signin">
-//   <button>Sign in</button>
-// </Link>
-
-//     <p>CHEERS</p>
-//   </div>
-// );
-
-//export default Index;
-
-// export default () => (
-//   <div>
-//     <Header />
-//     <p>CHEERS</p>
-//   </div>
-// );
+const PostLink = props => (
+  <li>
+    <Link as={`/p/${props.id}`} href={`/post?title=${props.title}`}>
+      <a>{props.title}</a>
+    </Link>
+  </li>
+);
 
 export default () => (
   <Layout>
-    <p>CHEERS</p>
+    <h1>CHEERS</h1>
+    <ul>
+      <PostLink title="About" />
+      <PostLink title="Bars" />
+      <PostLink title="Sign in" />
+    </ul>
   </Layout>
 );
