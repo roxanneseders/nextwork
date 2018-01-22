@@ -15,39 +15,15 @@ const PostLink = ({ post }) => (
     <Link as={`/p/${post.id}`} href={`/post?title=${post.title}`}>
       <a>{post.title}</a>
     </Link>
-    <style jsx>{`
-      li {
-        list-style: none;
-        margin: 5px 0;
-      }
-
-      a {
-        text-decoration: none;
-        color: blue;
-        font-family: "Arial";
-      }
-
-      a:hover {
-        opacity: 0.6;
-      }
-    `}</style>
   </li>
 );
+
 //removed1/22
 //const Index = props => (
 export default () => (
   <Layout>
     <h1>CHEERS</h1>
-    <ul>
-      {getPosts().map(post => (
-        <PostLink key={post.id} post={post} />
-        // <li key={post.id}>
-        //   <Link as={`/p/${post.id}`} href={`/post?id=${post.title}`}>
-        //     <a>{post.title}</a>
-        //   </Link>
-        //</li>
-      ))}
-    </ul>
+    <ul>{getPosts().map(post => <PostLink key={post.id} post={post} />)}</ul>
     <style jsx>{`
       h1,
       a {
