@@ -4,7 +4,7 @@
 //   </div>
 // );
 
-import Layout from "../components/MyLayout.js";
+import Layout from "../comps/MyLayout.js";
 
 export default () => (
   <Layout>

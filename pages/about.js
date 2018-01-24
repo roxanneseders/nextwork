@@ -5,9 +5,21 @@ import Layout from "../comps/MyLayout.js";
 //     <p>This is us</p>
 //   </div>
 // );
+//changed 1/24
+// export default () => (
+//   <Layout>
+//     <p>This is us</p>
+//   </Layout>
+// );
 
-export default () => (
+//added 1/24
+
+const About = () => (
   <Layout>
-    <p>This is us</p>
+    <div>
+      <p>Any place you want to go</p>
+    </div>
   </Layout>
 );
+
+export default About;
