@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Navbar from "./Navbar";
 
-const MyLayout = props => (
+const Layout = props => (
   <div>
     <Head>
       <title>CHEERS</title>
@@ -11,8 +11,9 @@ const MyLayout = props => (
       />
     </Head>
     <Navbar />
+
     <div className="container">{props.children}</div>
   </div>
 );
 
-export default MyLayout;
+export default Layout;

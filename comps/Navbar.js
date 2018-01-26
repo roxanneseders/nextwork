@@ -5,7 +5,7 @@ const Navbar = () => (
     <div className="container">
       <a className="navbar-brand" href="#" />
       <div className="collapse navbar-collapse">
-        <ul className="navbar-nav ml-auto">
+        <ul className="navbar-nav l-auto">
           <li className="nav-item">
             <Link href="/">
               <a className="nav-link">Home</a>
